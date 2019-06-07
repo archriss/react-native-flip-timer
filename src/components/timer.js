@@ -59,12 +59,12 @@ class Timer extends React.Component {
   }
 
   render() {
-    const { wrapperStyle, flipNumberProps, separatorEl } = this.props;
+    const { wrapperStyle, flipNumberProps, renderHours, separatorEl } = this.props;
     const { hours, minutes, seconds } = this.state;
     return (
       <View style={[style.wrapper, wrapperStyle]}>
-        {!!hours && <FlipNumber number={hours} unit="hours" {...flipNumberProps} />}
-        <Separator separatorEl={separatorEl} />
+        {renderHours && !!hours && <FlipNumber number={hours} unit="hours" {...flipNumberProps} />}
+        {renderHours && <Separator separatorEl={separatorEl} />}
         {!!minutes && <FlipNumber number={minutes} unit="minutes" {...flipNumberProps} />}
         <Separator separatorEl={separatorEl} />
         {!!seconds && <FlipNumber number={seconds} unit="seconds" {...flipNumberProps} />}
@@ -93,6 +93,7 @@ Timer.propTypes = {
     flipCardStyle: PropTypes.object,
     numberStyle: PropTypes.object,
   }),
+  renderHours: PropTypes.number,
   separatorEl: PropTypes.element
 };
 
