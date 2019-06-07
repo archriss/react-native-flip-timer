@@ -2,9 +2,7 @@
   "name": "react-native-flip-timer",
   "version": "0.0.4",
   "description": "A Flip timer implementation in React Native",
-  "main": "dist/react-native-flip-timer.cjs.js",
-  "jsnext:main": "dist/react-native-flip-timer.esm.js",
-  "module": "dist/react-native-flip-timer.esm.js",
+  "main": "src/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "prepublishOnly": "run-s build",
@@ -17,9 +15,6 @@
     "fix-lint": "yarn lint -- --fix",
     "yalc": "npm run build && yalc push"
   },
-  "files": [
-    "dist"
-  ],
   "keywords": [
     "react-native",
     "flip",
@@ -35,12 +30,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pritishvaidya/react-native-flip-timer.git"
+    "url": "git+https://github.com/archriss/react-native-flip-timer.git"
   },
   "bugs": {
-    "url": "https://github.com/pritishvaidya/react-native-flip-timer/issues"
+    "url": "https://github.com/archriss/react-native-flip-timer/issues"
   },
-  "homepage": "https://github.com/pritishvaidya/react-native-flip-timer#readme",
+  "homepage": "https://github.com/archriss/react-native-flip-timer#readme",
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/preset-env": "^7.3.0",
